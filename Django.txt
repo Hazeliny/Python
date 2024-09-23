@@ -1,0 +1,9 @@
+Django is based on MVC and MTV. 
+M - Model
+V - View
+C - Controller
+T - Template
+
+advantage:1. separate the focus 2. easy to maintain 3. expandable 4.easy to test 5.suitable for teamwork
+
+
