@@ -7,3 +7,8 @@ T - Template
 advantage:1. separate the focus 2. easy to maintain 3. expandable 4.easy to test 5.suitable for teamwork
 
 
+Flow of a Web Request
+1. When the request arrives at a Django app, the incoming request URL is compared to the list of paths in urls.py in the variable urlpatterns.
+2. When there is a url match, it selects a "View" which is a bit of code that handles any database access and then produces and delivers the response to the browser.
+3. The view access the database indirectly through an abstraction called a "model"
+4. This is a general web pattern called "Model-View-Controller" or MVC.
