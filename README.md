@@ -2,4 +2,4 @@
 
 <h3 align="left">Django:</h3>
 
-![DjangoMVC]([https://github.com/Hazeliny/Python/blob/main/assets/Django.png?raw=true])
+![DjangoMVC](https://github.com/Hazeliny/Python/blob/main/assets/Django.png)
