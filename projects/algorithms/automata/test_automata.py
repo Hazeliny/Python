@@ -68,4 +68,5 @@ if __name__ == '__main__':
 '''
 from dfa import DFA #绝对路径导入， 在automata目录下当独立脚本运行: python3 test_automata.py
 from .dfa import DFA #相对路径导入，在automata的上一级目录里把automata当python包(因为已有__init__.py文件)运行: python3 -m automata.test_automata
+在automata目录下用命令python3 -m unittest -v test_automata可以显示每个测试名称的测试结果
 '''
