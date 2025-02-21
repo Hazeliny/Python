@@ -10,6 +10,7 @@
 #    importlib.import_module(module)
 #from backtrack import add_operators # import the modules in backtrack directly 这里不适用，编译会报错说模块对象不可调用，因为这里的add_operators不是module，而是一个函数
 from backtrack.add_operators import add_operators  # other alternative: import the specific func/class
+from backtrack.anagram import anagram
 
 import unittest
 
@@ -39,6 +40,11 @@ class TestAddOperator(unittest.TestCase):
                   '12+3*0-4-5',
                   '12-3*0-4-5']
         self.assertEqual(add_operators(s, target), answer)
+
+class TestAnagram(unittest.TestCase):
+    def test_anagram(self):
+        self.assertTrue(anagram('apple', 'pleap'))
+        self.assertFalse(anagram("apple", "cherry"))
 
 if __name__ == '__main__':
     unittest.main()
