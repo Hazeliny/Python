@@ -50,10 +50,11 @@ def num_islands(grid):
         
 '''
 #另一种思路，把访问过的岛屿全部标记为0
+#enumerate()作用：同时获取索引和值;替代 range(len());可自定义索引起始值:fruit_dict = {i: fruit for i, fruit in enumerate(fruits, start=100)}
 def num_islands(grid):
     count = 0
     for i in range(len(grid)):
-        for j, col in enumerate(grid[i]): # enumerate(grid[i]) 让j获取索引，col获取当前单元格的值0或者1。enumerate()作用：同时获取索引和值，替代 range(len())
+        for j, col in enumerate(grid[i]): # enumerate(grid[i]) 让j获取索引，col获取当前单元格的值0或者1
             if col == 1:
                 dfs(grid, i, j)
                 count += 1
