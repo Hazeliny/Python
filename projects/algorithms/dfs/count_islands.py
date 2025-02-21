@@ -48,3 +48,26 @@ def num_islands(grid):
 
     return count
         
+'''
+#另一种思路，把访问过的岛屿全部标记为0
+def num_islands(grid):
+    count = 0
+    for i in range(len(grid)):
+        for j, col in enumerate(grid[i]): # enumerate(grid[i]) 让j获取索引，col获取当前单元格的值0或者1。enumerate()作用：同时获取索引和值，替代 range(len())
+            if col == 1:
+                dfs(grid, i, j)
+                count += 1
+    return count
+
+
+def dfs(grid, i, j):
+    if (i < 0 or i >= len(grid)) or (j < 0 or j >= len(grid[0])):
+        return
+    if grid[i][j] != 1:
+        return
+    grid[i][j] = 0
+    dfs(grid, i+1, j)
+    dfs(grid, i-1, j)
+    dfs(grid, i, j+1)
+    dfs(grid, i, j-1)
+'''
